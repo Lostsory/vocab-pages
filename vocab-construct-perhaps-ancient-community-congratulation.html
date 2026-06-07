@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vocabulary Builder</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5b667a;
+      --line: #d9dfeb;
+      --paper: #f7f8fb;
+      --card: #ffffff;
+      --accent: #2f6f8f;
+    }
+    * { box-sizing: border-box; }
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+    main {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    header {
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
+      overflow-wrap: anywhere;
+    }
+    .summary {
+      color: var(--muted);
+      margin: 0;
+    }
+    .word-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 16px;
+    }
+    .word-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+    }
+    .word-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.1;
+      overflow-wrap: anywhere;
+    }
+    .pos {
+      color: var(--accent);
+      font-size: 0.9rem;
+      line-height: 1.2;
+      text-align: right;
+    }
+    .phonetic {
+      color: var(--muted);
+      font-family: "Charis SIL", "Noto Sans", serif;
+      font-size: 1rem;
+    }
+    .translation {
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+    dl {
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+    dt {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    dd {
+      margin: 3px 0 0;
+      overflow-wrap: anywhere;
+    }
+    audio {
+      width: 100%;
+      min-height: 40px;
+    }
+    .status {
+      margin-top: auto;
+      color: var(--muted);
+      font-size: 0.82rem;
+      overflow-wrap: anywhere;
+    }
+    a { color: var(--accent); }
+    @media (max-width: 640px) {
+      main {
+        width: min(100% - 20px, 980px);
+        padding: 22px 0;
+      }
+      header {
+        margin-bottom: 16px;
+        padding-bottom: 14px;
+      }
+      h1 {
+        font-size: 2rem;
+        line-height: 1.08;
+      }
+      .summary {
+        font-size: 0.95rem;
+      }
+      .word-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .word-card {
+        min-height: auto;
+        padding: 15px;
+        gap: 11px;
+      }
+      .word-top {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      h2 {
+        font-size: 1.45rem;
+      }
+      .pos {
+        text-align: left;
+      }
+      audio {
+        min-height: 44px;
+      }
+      dt {
+        font-size: 0.75rem;
+      }
+    }
+    @media (max-width: 360px) {
+      main {
+        width: min(100% - 14px, 980px);
+        padding: 16px 0;
+      }
+      .word-card {
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Vocabulary Builder</h1>
+      <p class="summary">5 bilingual vocabulary entries with Chinese translations and Oxford-sourced pronunciation audio where available.</p>
+    </header>
+    <section class="word-list" aria-label="Vocabulary entries">
+      <article class="word-card" data-word="construct" data-status="ok" data-translation-status="provided">
+        <div class="word-top">
+          <div>
+            <h2>construct</h2>
+            <div class="phonetic">/kənˈstrʌkt/</div>
+          </div>
+          <span class="pos">verb</span>
+        </div>
+        <audio controls preload="none" src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/x/xco/xcons/xconstruct__gb_3.mp3"></audio>
+        <dl>
+          <div>
+            <dt>中文翻译</dt>
+            <dd class="translation">建造</dd>
+          </div>
+          <div>
+            <dt>English Definition</dt>
+            <dd>to build or make something such as a road, building or machine</dd>
+          </div>
+          <div>
+            <dt>Example</dt>
+            <dd>They constructed a shelter out of fallen branches.</dd>
+          </div>
+        </dl>
+        <div class="status"><a href="https://www.oxfordlearnersdictionaries.com/definition/english/construct_1">Oxford source</a> · status: ok</div>
+      </article>
+      <article class="word-card" data-word="perhaps" data-status="ok" data-translation-status="provided">
+        <div class="word-top">
+          <div>
+            <h2>perhaps</h2>
+            <div class="phonetic">/pəˈhæps/</div>
+          </div>
+          <span class="pos">adverb</span>
+        </div>
+        <audio controls preload="none" src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/per/perha/perhaps__gb_3.mp3"></audio>
+        <dl>
+          <div>
+            <dt>中文翻译</dt>
+            <dd class="translation">也许</dd>
+          </div>
+          <div>
+            <dt>English Definition</dt>
+            <dd>possibly</dd>
+          </div>
+          <div>
+            <dt>Example</dt>
+            <dd>Perhaps he&#x27;s forgotten.</dd>
+          </div>
+        </dl>
+        <div class="status"><a href="https://www.oxfordlearnersdictionaries.com/definition/english/perhaps">Oxford source</a> · status: ok</div>
+      </article>
+      <article class="word-card" data-word="ancient" data-status="ok" data-translation-status="provided">
+        <div class="word-top">
+          <div>
+            <h2>ancient</h2>
+            <div class="phonetic">/ˈeɪnʃənt/</div>
+          </div>
+          <span class="pos">adjective</span>
+        </div>
+        <audio controls preload="none" src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/a/anc/ancie/ancient__gb_2.mp3"></audio>
+        <dl>
+          <div>
+            <dt>中文翻译</dt>
+            <dd class="translation">古代的</dd>
+          </div>
+          <div>
+            <dt>English Definition</dt>
+            <dd>belonging to a period of history that is thousands of years in the past</dd>
+          </div>
+          <div>
+            <dt>Example</dt>
+            <dd>He&#x27;s ancient—he must be at least fifty!</dd>
+          </div>
+        </dl>
+        <div class="status"><a href="https://www.oxfordlearnersdictionaries.com/definition/english/ancient">Oxford source</a> · status: ok</div>
+      </article>
+      <article class="word-card" data-word="community" data-status="ok" data-translation-status="provided">
+        <div class="word-top">
+          <div>
+            <h2>community</h2>
+            <div class="phonetic">/kəˈmjuːnəti/</div>
+          </div>
+          <span class="pos">noun</span>
+        </div>
+        <audio controls preload="none" src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/com/commu/community__gb_3.mp3"></audio>
+        <dl>
+          <div>
+            <dt>中文翻译</dt>
+            <dd class="translation">社区</dd>
+          </div>
+          <div>
+            <dt>English Definition</dt>
+            <dd>all the people who live in a particular area, country, etc. when talked about as a group</dd>
+          </div>
+          <div>
+            <dt>Example</dt>
+            <dd>She comes from a small island community.</dd>
+          </div>
+        </dl>
+        <div class="status"><a href="https://www.oxfordlearnersdictionaries.com/definition/english/community">Oxford source</a> · status: ok</div>
+      </article>
+      <article class="word-card" data-word="congratulation" data-status="ok" data-translation-status="provided">
+        <div class="word-top">
+          <div>
+            <h2>congratulation</h2>
+            <div class="phonetic">/kənˌɡrætʃəˈleɪʃn/</div>
+          </div>
+          <span class="pos">noun</span>
+        </div>
+        <audio controls preload="none" src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/x/xco/xcong/xcongratulation__gb_1.mp3"></audio>
+        <dl>
+          <div>
+            <dt>中文翻译</dt>
+            <dd class="translation">祝贺</dd>
+          </div>
+          <div>
+            <dt>English Definition</dt>
+            <dd>a message congratulating</dd>
+          </div>
+          <div>
+            <dt>Example</dt>
+            <dd>Congratulations on your exam results!</dd>
+          </div>
+        </dl>
+        <div class="status"><a href="https://www.oxfordlearnersdictionaries.com/definition/english/congratulation">Oxford source</a> · status: ok</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
